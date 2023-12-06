@@ -1,5 +1,6 @@
 require 'mkmf'
 require 'pathname'
+require 'tree_sitter/version'
 
 # ################################## #
 #             Some helpers           #
