@@ -1,6 +1,5 @@
 require 'mkmf'
 require 'pathname'
-require 'tree_sitter/version'
 
 # ################################## #
 #             Some helpers           #
@@ -41,7 +40,7 @@ end
 
 dir_include, dir_lib =
   if system_tree_sitter?
-    [['/opt/include', '/opt/local/include', '/usr/include', '/usr/local/include'],
+    [['/opt/include', '/opt/local/include', '/usr/include', '/usr/local/include', '/opt/homebrew/Cellar/tree-sitter/0.20.8/include'],
      ['/opt/lib', '/opt/local/lib', '/usr/lib', '/usr/local/lib']]
   else
     src = Pathname.pwd / "tree-sitter-#{TreeSitter::VERSION}"
